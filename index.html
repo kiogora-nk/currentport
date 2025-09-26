@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Newton Kiogora - Cybersecurity Enthusiast, AI Innovator, and Software Engineer specializing in secure systems and practical applications." />
+  <title>Newton Kiogora — Cybersecurity & Software Engineering Portfolio</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --dark: #0f172a;
+      --accent: #2563eb;
+      --accent-light: #3b82f6;
+      --card: #ffffff;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --success: #10b981;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: #334155;
+      line-height: 1.6;
+      font-weight: 400;
+    }
+    
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    
+    a:hover {
+      color: var(--accent-light);
+    }
+    
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 0;
+    }
+    
+    section {
+      padding: 4rem 0;
+    }
+    
+    /* ===== Header / Navigation ===== */
+    header.site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(10px);
+      color: #fff;
+      padding: 0.8rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.3s ease;
+    }
+    
+    .nav-inner {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 700;
+      font-size: 1.25rem;
+    }
+    
+    .brand .dot {
+      width: 10px;
+      height: 10px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+    
+    nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+    
+    nav a {
+      color: #e2e8f0;
+      font-weight: 500;
+      font-size: 0.95rem;
+      position: relative;
+      padding: 0.5rem 0;
+    }
+    
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width 0.3s ease;
+    }
+    
+    nav a:hover::after,
+    nav a:focus::after {
+      width: 100%;
+    }
+    
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    
+    /* ===== Hero Section ===== */
+    #hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-content {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      width: 100%;
+    }
+    
+    .hero-text {
+      flex: 1;
+      z-index: 2;
+    }
+    
+    .hero-image {
+      flex-shrink: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .hero-photo {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid var(--accent);
+      box-shadow: 0 20px 40px rgba(2, 6, 23, 0.5);
+    }
+    
+    .hero-title {
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.25rem;
+      color: #cbd5e1;
+      margin-bottom: 2rem;
+      max-width: 600px;
+    }
+    
+    .accent-text {
+      color: var(--accent);
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 600;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+    
+    .btn:hover {
+      background: var(--accent-light);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+    }
+    
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--accent);
+      color: var(--accent);
+    }
+    
+    .btn-outline:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+    
+    /* ===== Section Headings ===== */
+    .section-title {
+      font-size: 2.25rem;
+      text-align: center;
+      margin-bottom: 3rem;
+      font-weight: 700;
+      color: var(--dark);
+      position: relative;
+    }
+    
+    .section-title::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: var(--accent);
+      margin: 1rem auto 0;
+      border-radius: 2px;
+    }
+    
+    /* ===== About Section ===== */
+    #about {
+      background: #fff;
+    }
+    
+    .about-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+    
+    /* ===== Skills Section ===== */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    .skill-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid var(--border);
+    }
+    
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .skill-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    
+    .skill-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: var(--dark);
+    }
+    
+    .skill-card p {
+      color: var(--muted);
+    }
+    
+    /* ===== Projects Section ===== */
+    #projects {
+      background: #f1f5f9;
+    }
+    
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+    
+    .project-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid var(--border);
+    }
+    
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .project-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    
+    .project-content {
+      padding: 1.5rem;
+    }
+    
+    .project-content h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+      color: var(--dark);
+    }
+    
+    .project-content p {
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+    
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .tag {
+      background: #e0f2fe;
+      color: #0369a1;
+      padding: 0.25rem 0.75rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+    
+    .project-actions {
+      display: flex;
+      gap: 1rem;
+    }
+    
+    .project-btn {
+      flex: 1;
+      text-align: center;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      background: rgba(37, 99, 235, 0.1);
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .project-btn:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+    
+    /* ===== Certificates Section ===== */
+    .certificates-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    
+    .certificate-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+      border: 1px solid var(--border);
+    }
+    
+    .certificate-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .certificate-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    
+    .certificate-content {
+      padding: 1.5rem;
+    }
+    
+    .certificate-content h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: var(--dark);
+    }
+    
+    .certificate-content p {
+      color: var(--muted);
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+    
+    .certificate-link {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      background: rgba(37, 99, 235, 0.1);
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+    }
+    
+    .certificate-link:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+    
+    /* ===== Contact Section ===== */
+    #contact {
+      background: #fff;
+    }
+    
+    .contact-content {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .contact-info {
+      margin-bottom: 2rem;
+    }
+    
+    .contact-info p {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+    
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    
+    .contact-link:hover {
+      background: var(--accent-light);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(37, 99, 235, 0.2);
+    }
+    
+    /* ===== Footer ===== */
+    footer {
+      background: var(--dark);
+      color: #cbd5e1;
+      padding: 2.5rem 0;
+      text-align: center;
+    }
+    
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+    
+    .footer-links a {
+      color: #94a3b8;
+      transition: color 0.2s ease;
+    }
+    
+    .footer-links a:hover {
+      color: #fff;
+    }
+    
+    .copyright {
+      font-size: 0.9rem;
+      color: #94a3b8;
+    }
+    
+    /* ===== Modal ===== */
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(15, 23, 42, 0.8);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+      padding: 2rem;
+      backdrop-filter: blur(5px);
+    }
+    
+    .modal.open {
+      display: flex;
+    }
+    
+    .modal-content {
+      background: #fff;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 900px;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      position: relative;
+    }
+    
+    .modal-header {
+      padding: 1.5rem 2rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .modal-header h3 {
+      font-size: 1.5rem;
+      color: var(--dark);
+    }
+    
+    .close-btn {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--muted);
+      transition: color 0.2s ease;
+    }
+    
+    .close-btn:hover {
+      color: var(--dark);
+    }
+    
+    .modal-body {
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    
+    .modal-image {
+      width: 100%;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    
+    .modal-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    .modal-details h4 {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: var(--dark);
+    }
+    
+    .modal-details p {
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+    
+    .modal-tech {
+      margin-bottom: 1.5rem;
+    }
+    
+    .modal-actions {
+      display: flex;
+      gap: 1rem;
+    }
+    
+    /* ===== Responsive Design ===== */
+    @media (max-width: 1024px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+      
+      .modal-body {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      nav {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: calc(100vh - 70px);
+        background: var(--dark);
+        flex-direction: column;
+        padding: 2rem;
+        transition: right 0.3s ease;
+        z-index: 1000;
+      }
+      
+      nav.open {
+        right: 0;
+      }
+      
+      .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+      }
+      
+      .hero-title {
+        font-size: 2rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 1.1rem;
+      }
+      
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .modal-body {
+        padding: 1.5rem;
+      }
+      
+      .modal-actions {
+        flex-direction: column;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .container {
+        width: 95%;
+      }
+      
+      section {
+        padding: 3rem 0;
+      }
+      
+      .section-title {
+        font-size: 1.75rem;
+      }
+      
+      .btn {
+        display: block;
+        width: 100%;
+        margin-right: 0;
+      }
+      
+      .contact-links {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .contact-link {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header class="site-header" role="banner">
+    <div class="nav-inner">
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        Newton Kiogora
+      </div>
+      
+      <button class="mobile-menu-btn" aria-label="Toggle navigation" aria-expanded="false">
+        ☰
+      </button>
+      
+      <nav role="navigation" aria-label="Main navigation">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" aria-label="Introduction">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">
+            Hello, I'm <span class="accent-text">Newton Kiogora</span>
+          </h1>
+          <p class="hero-subtitle">
+            Cybersecurity Enthusiast · AI Innovator · Software Engineer
+          </p>
+          <p class="hero-description">
+            I build secure systems, AI tools for agriculture, and practical web applications with a focus on usability and security.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn">View My Work</a>
+            <a href="#contact" class="btn btn-outline">Get In Touch</a>
+          </div>
+        </div>
+        
+        <div class="hero-image">
+          <img class="hero-photo" src="profile.jpg" alt="Professional portrait of Newton Kiogora">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" aria-labelledby="about-title">
+    <div class="container">
+      <h2 id="about-title" class="section-title">About Me</h2>
+      <div class="about-content">
+        <p>
+          I'm a Computer Science student at Egerton University with a passion for creating technology solutions that solve real-world problems. My expertise spans cybersecurity, artificial intelligence, and software engineering.
+        </p>
+        <p>
+          I hold certifications from the <strong>HK4 Cybersecurity Bootcamp</strong>, <strong>Cybersecurity Awareness (ICT Kenya)</strong>, and I'm currently completing the <strong>AI & Software Engineering</strong> program at PLP Academy.
+        </p>
+        <p>
+          My approach combines technical excellence with practical application, ensuring that every project I work on is not only functional but also secure, scalable, and user-friendly.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" aria-labelledby="skills-title">
+    <div class="container">
+      <h2 id="skills-title" class="section-title">Skills & Expertise</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">🔐</div>
+          <h3>Cybersecurity</h3>
+          <p>SOC operations, GRC, security awareness, vulnerability scanning, and network security.</p>
+        </div>
+        
+        <div class="skill-card">
+          <div class="skill-icon">💻</div>
+          <h3>Programming</h3>
+          <p>Python, Java, JavaScript, HTML, CSS, and experience with various frameworks and libraries.</p>
+        </div>
+        
+        <div class="skill-card">
+          <div class="skill-icon">⚙️</div>
+          <h3>Software Engineering</h3>
+          <p>System design, DFD, ER diagrams, database design, and full-stack development.</p>
+        </div>
+        
+        <div class="skill-card">
+          <div class="skill-icon">🤖</div>
+          <h3>Artificial Intelligence</h3>
+          <p>Machine learning basics, AI model development, and practical AI applications.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" aria-labelledby="projects-title">
+    <div class="container">
+      <h2 id="projects-title" class="section-title">Featured Projects</h2>
+      <div class="projects-grid">
+        
+        <!-- Project 1 -->
+        <article class="project-card">
+          <img src="library.jpg" alt="Library Management System interface" class="project-image">
+          <div class="project-content">
+            <h3>Library Management System</h3>
+            <div class="project-tags">
+              <span class="tag">Java</span>
+              <span class="tag">PHP</span>
+              <span class="tag">MySQL</span>
+            </div>
+            <p>Full-stack system to manage books, members, loans, and reporting with an intuitive interface.</p>
+            <div class="project-actions">
+              <button class="project-btn" data-project="library">View Details</button>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Project 2 -->
+        <article class="project-card">
+          <img src="e commerce.jpg" alt="E-commerce application with Mpesa integration" class="project-image">
+          <div class="project-content">
+            <h3>E-commerce App with Mpesa</h3>
+            <div class="project-tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">Payment API</span>
+              <span class="tag">E-commerce</span>
+            </div>
+            <p>Online store with integrated Mpesa payment system tailored for the Kenyan market.</p>
+            <div class="project-actions">
+              <button class="project-btn" data-project="ecommerce">View Details</button>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Project 3 -->
+        <article class="project-card">
+          <img src="ai planner.jpg" alt="AI Crop Planner interface" class="project-image">
+          <div class="project-content">
+            <h3>AI Crop Planner</h3>
+            <div class="project-tags">
+              <span class="tag">AI/ML</span>
+              <span class="tag">Python</span>
+              <span class="tag">Agriculture</span>
+            </div>
+            <p>AI-powered tool that recommends optimal crops and planting schedules for small-scale farms.</p>
+            <div class="project-actions">
+              <button class="project-btn" data-project="ai-crop">View Details</button>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Project 4 -->
+        <article class="project-card">
+          <img src="networkscanner.jpg" alt="SeniorScanner network security tool" class="project-image">
+          <div class="project-content">
+            <h3>SeniorScanner™</h3>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Cybersecurity</span>
+              <span class="tag">Networking</span>
+            </div>
+            <p>Multithreaded Python network scanner with comprehensive logging and reporting capabilities.</p>
+            <div class="project-actions">
+              <button class="project-btn" data-project="seniorscanner">View Details</button>
+            </div>
+          </div>
+        </article>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificates Section -->
+  <section id="certificates" aria-labelledby="certificates-title">
+    <div class="container">
+      <h2 id="certificates-title" class="section-title">Certifications</h2>
+      <div class="certificates-grid">
+        
+        <div class="certificate-card">
+          <img src="hk4.jpg" alt="HK4 Cybersecurity Bootcamp Certificate" class="certificate-image">
+          <div class="certificate-content">
+            <h3>HK4 Cybersecurity Bootcamp</h3>
+            <p>Comprehensive training in cybersecurity fundamentals, threat detection, and security operations.</p>
+            <a href="certs/hk4-full.jpg" class="certificate-link" target="_blank">View Certificate</a>
+          </div>
+        </div>
+        
+        <div class="certificate-card">
+          <img src="ICT.jpg" alt="ICT Kenya Cybersecurity Awareness Certificate" class="certificate-image">
+          <div class="certificate-content">
+            <h3>Cybersecurity Awareness</h3>
+            <p>Certificate in cybersecurity best practices, threat awareness, and digital safety measures.</p>
+            <a href="certs/ict-kenya-full.jpg" class="certificate-link" target="_blank">View Certificate</a>
+          </div>
+        </div>
+        
+        <div class="certificate-card">
+          <img src="Newton kiogora.pdf" alt="PLP Academy AI & Software Engineering Certificate" class="certificate-image">
+          <div class="certificate-content">
+            <h3>AI & Software Engineering</h3>
+            <p>Advanced training in artificial intelligence principles and software engineering methodologies.</p>
+            <a href="certs/plp-full.jpg" class="certificate-link" target="_blank">View Certificate</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" aria-labelledby="contact-title">
+    <div class="container">
+      <h2 id="contact-title" class="section-title">Get In Touch</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <p>I'm always open to discussing new opportunities and collaborations.</p>
+          <p>Feel free to reach out through any of the channels below.</p>
+        </div>
+        
+        <div class="contact-links">
+          <a href="mailto:newtonkiogora87@gmail.com" class="contact-link">
+            <span>📧</span> Email Me
+          </a>
+          <a href="tel:+254745395981" class="contact-link">
+            <span>📞</span> Call Me
+          </a>
+          <a href="https://wa.me/254745395981?text=Hi%20Newton%2C%20I%27d%20like%20to%20connect" class="contact-link" target="_blank">
+            <span>💬</span> WhatsApp
+          </a>
+        </div>
+        
+        <p class="muted" style="margin-top: 2rem;">
+          Email: newtonkiogora87@gmail.com · Phone: +254 745 395 981
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="brand">
+          <span class="dot" aria-hidden="true"></span>
+          Newton Kiogora
+        </div>
+        
+        <div class="footer-links">
+          <a href="#hero">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+        
+        <p class="copyright">
+          © <span id="year"></span> Newton Kiogora. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Project Modal -->
+  <div id="projectModal" class="modal" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modalTitle">Project Details</h3>
+        <button class="close-btn" aria-label="Close modal">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-image">
+          <img id="modalImage" src="" alt="">
+        </div>
+        <div class="modal-details">
+          <h4>Project Overview</h4>
+          <p id="modalDescription"></p>
+          
+          <div class="modal-tech">
+            <h4>Technologies Used</h4>
+            <div id="modalTech"></div>
+          </div>
+          
+          <div class="modal-actions">
+            <a id="modalDemo" href="#" class="btn" target="_blank">Live Demo</a>
+            <a id="modalCode" href="#" class="btn btn-outline" target="_blank">View Code</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // Mobile menu functionality
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('nav');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+      mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+      nav.classList.toggle('open');
+    });
+    
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+    
+    // Project modal functionality
+    const modal = document.getElementById('projectModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalImage = document.getElementById('modalImage');
+    const modalDescription = document.getElementById('modalDescription');
+    const modalTech = document.getElementById('modalTech');
+    const modalDemo = document.getElementById('modalDemo');
+    const modalCode = document.getElementById('modalCode');
+    const closeBtn = document.querySelector('.close-btn');
+    
+    // Project data
+    const projects = {
+      library: {
+        title: "Library Management System",
+        image: "projects/library.jpg",
+        description: "A comprehensive full-stack system designed to manage all aspects of a library's operations. The system includes modules for book inventory management, member registration and accounts, loan tracking, fine calculation, and comprehensive reporting. Built with a focus on usability and efficiency, it streamlines library operations and improves user experience for both staff and patrons.",
+        tech: ["Java", "PHP", "MySQL", "HTML/CSS", "JavaScript"],
+        demo: "#",
+        code: "#"
+      },
+      ecommerce: {
+        title: "E-commerce App with Mpesa Integration",
+        image: "projects/ecommerce.jpg",
+        description: "A complete e-commerce solution tailored for the Kenyan market with integrated Mpesa payment functionality. The platform includes product catalog, shopping cart, user accounts, order management, and a secure payment gateway. The admin panel allows for inventory management, order processing, and sales analytics.",
+        tech: ["JavaScript", "React", "Node.js", "MongoDB", "Mpesa API"],
+        demo: "#",
+        code: "#"
+      },
+      "ai-crop": {
+        title: "AI Crop Planner",
+        image: "projects/ai-crop.jpg",
+        description: "An AI-powered agricultural tool that helps small-scale farmers optimize their crop planning. The system analyzes weather patterns, soil conditions, and market trends to recommend the most suitable crops and optimal planting schedules. The interface is designed specifically for users with limited technical background, making advanced agricultural insights accessible to everyone.",
+        tech: ["Python", "Machine Learning", "Pandas", "Flask", "JavaScript"],
+        demo: "#",
+        code: "#"
+      },
+      seniorscanner: {
+        title: "SeniorScanner™ Network Security Tool",
+        image: "projects/seniorscanner.jpg",
+        description: "A sophisticated Python-based network scanning tool designed for security professionals. SeniorScanner™ performs comprehensive network discovery, port scanning, service enumeration, and basic vulnerability assessment. The multithreaded architecture ensures fast scanning of large networks, while detailed logging and reporting capabilities provide actionable security insights.",
+        tech: ["Python", "Multithreading", "Network Security", "CSV/JSON Export"],
+        demo: "#",
+        code: "#"
+      }
+    };
+    
+    // Open modal when project button is clicked
+    document.querySelectorAll('.project-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const projectId = button.getAttribute('data-project');
+        const project = projects[projectId];
+        
+        if (project) {
+          modalTitle.textContent = project.title;
+          modalImage.src = project.image;
+          modalImage.alt = project.title;
+          modalDescription.textContent = project.description;
+          
+          // Clear and populate technologies
+          modalTech.innerHTML = '';
+          project.tech.forEach(tech => {
+            const tag = document.createElement('span');
+            tag.className = 'tag';
+            tag.textContent = tech;
+            modalTech.appendChild(tag);
+          });
+          
+          // Set demo and code links
+          modalDemo.href = project.demo;
+          modalCode.href = project.code;
+          
+          // Show/hide links based on availability
+          modalDemo.style.display = project.demo !== '#' ? 'inline-block' : 'none';
+          modalCode.style.display = project.code !== '#' ? 'inline-block' : 'none';
+          
+          // Open modal
+          modal.classList.add('open');
+          modal.setAttribute('aria-hidden', 'false');
+          document.body.style.overflow = 'hidden';
+        }
+      });
+    });
+    
+    // Close modal functionality
+    function closeModal() {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = 'auto';
+    }
+    
+    closeBtn.addEventListener('click', closeModal);
+    
+    // Close modal when clicking outside content
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('open')) {
+        closeModal();
+      }
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          const headerHeight = document.querySelector('header').offsetHeight;
+          const targetPosition = targetElement.offsetTop - headerHeight;
+          
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
